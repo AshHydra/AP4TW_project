@@ -1,0 +1,45 @@
+.hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-left: 25px;
+    gap: 30px;
+}
+
+
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+
+}
+
+.weather {
+    border: 2px orange solid;
+    border-radius: 10px;
+    height: 300px;
+    width: 100%;
+}
+
+.chanceOfRain {
+    border: 2px white solid;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 300px;
+}
+
+
+/*
+ making it responsive 
+    when the screen size is less than 768px
+*/
+@media (max-width: 768px) {
+    .hero {
+        gap: 15px;
+    }
+}

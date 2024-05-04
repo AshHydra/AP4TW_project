@@ -6,6 +6,10 @@ const SearchBar = () => {
         <div className={styles.search}>
             <h1>Searchbar</h1>
         </div>
+
+
+
+
     );
 }
 

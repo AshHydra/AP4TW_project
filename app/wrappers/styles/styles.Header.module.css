@@ -6,13 +6,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 100%;
-    padding: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    width: 100vw;
+    padding: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     justify-content: space-between;
-    
+    gap: 30px;
 }
+
 
 .header h1 {
     font-size: 2rem;
@@ -29,19 +30,30 @@
 
 .search {
     border: 2px blue solid;
-    width: 60%;
-    max-width: 450px;
+    width: 100%;
+    /* max-width: 450px; */
     height: 50px;
     border-radius: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
+}
+
+.innerWrapperTheme {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px yellow solid;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
 }
 
 .theme {
     border: 2px purple solid;
-    width: 50px;
+    width: 385px;
     height: 50px;
     border-radius: 10px;
+    margin-right: 10px;
+    justify-content: flex-end;
+    display: flex;
 }
 
 

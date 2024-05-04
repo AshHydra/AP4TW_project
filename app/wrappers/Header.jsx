@@ -30,7 +30,10 @@ const Header = () => {
 
             <div className={styles.theme}>
                 {/*  render our darkmode component */}
-                <DarkMode />
+                <div className={styles.innerWrapperTheme}>
+                    <DarkMode />    
+                </div>
+                
             </div>
 
         </header>
