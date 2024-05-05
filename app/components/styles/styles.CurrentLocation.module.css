@@ -1,4 +1,39 @@
+.currentLocation {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 2px;
+    padding: 8px;
+    align-items: center;
+}
+
+
 .currentLocation h1 {
     font-size: 1rem;
     color: var(--text-primary);
 }
+
+.locationIcon {
+    /* border: 2px red solid; */
+    width: 25%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.locationText {
+    /* border: 2px blue solid; */
+    width: 75%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    align-items: center;
+    text-wrap: nowrap;
+}
+

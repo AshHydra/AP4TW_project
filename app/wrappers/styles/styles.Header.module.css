@@ -1,6 +1,6 @@
 /* styling our header */
 .header {
-    border: 2px red solid;
+    /* border: 2px red solid; */
     min-height: 70px;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 .location {
-    border: 2px green solid;
+    /* border: 2px green solid; */
     width: 25%;
     max-width: 200px;
     height: 50px;
@@ -29,7 +29,7 @@
 }
 
 .search {
-    border: 2px blue solid;
+    /* border: 2px blue solid; */
     width: 100%;
     /* max-width: 450px; */
     height: 50px;
@@ -40,14 +40,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    border: 2px yellow solid;
+    /* border: 2px yellow solid; */
     border-radius: 10px;
     height: 50px;
     width: 50px;
 }
 
 .theme {
-    border: 2px purple solid;
+    /* border: 2px purple solid; */
     width: 385px;
     height: 50px;
     border-radius: 10px;

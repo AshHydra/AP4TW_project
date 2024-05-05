@@ -10,16 +10,56 @@
 
 
   /* define our global color palette */
-  --primary: #111014;
-  --secondary: #232323;
+  --primary: #fafafa;
+  --secondary: #e9e7e7;
   --secondary-accent: #3d3d3f;
 
-
   /* define our text colors */
-  --text-primary: #f0f0f2;
+  --text-primary: #000;
   --text-secondary: #aecadf;
 
+  --button-color-naked: #ffffff;
+  --button-hover-color: #f5f3f3;
 }
+
+
+/* Define dark theme variables */
+[data-theme='dark'] {
+  --primary: #111014;
+  --text-primary: #fff;
+  --secondary: #232323;
+
+
+  
+  --text-color: #fff;
+  --text-color-secondary: #cac8c8;
+  --text-color-accent: #a7a5a5;
+  --text-color-accent-secondary: #858484;
+  --text-color-secondary-hover: #b6b4b4;
+  --text-color-disabled: #8f8d8d;
+  --background-skeleton: #343438;
+  --button-color-naked: #14171a;
+  --button-text-color: #e0e0e0;
+  --background-color: #111113;
+  --background-color-accent: #2f2f33;
+  --background-secondary: #2f3641;
+  --background-hover: #252930;
+  --background-hover-secondary: #1f1f23;
+  --border-color: #414040;
+  --border-color-secondary: #313131;
+  --hover-color: #2a2f38;
+  --button-hover-color: #464950;
+  --brand-purple: #9333ea;
+  --brand-purple-disabled: #683697;
+  --brand-purple-secondary: #721ac5;
+  --input-field: #27272a;
+  --icon-color: #e0e0e0;
+  --nextui-default-foreground:#9333ea;
+  --nextui-background:  #fafafa;
+  --tw-ring-color: transparent ;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

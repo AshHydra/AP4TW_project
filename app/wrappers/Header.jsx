@@ -7,7 +7,7 @@ import styles from './styles/styles.Header.module.css';
 import SearchBar from '../components/SearchBar.jsx';
 
 // importing our darkmode component (switch for themes)
-import DarkMode from '../components/DarkMode.jsx';
+import ThemeButton from '../components/ThemeButton.jsx';
 
 // importing our location component
 import Location from '../components/CurrentLocation.jsx';
@@ -31,9 +31,9 @@ const Header = () => {
             <div className={styles.theme}>
                 {/*  render our darkmode component */}
                 <div className={styles.innerWrapperTheme}>
-                    <DarkMode />    
+                    <ThemeButton />
                 </div>
-                
+
             </div>
 
         </header>
