@@ -19,19 +19,62 @@
 }
 
 .weather {
-    border: 2px orange solid;
+    /* border: 2px orange solid; */
     border-radius: 10px;
     height: 300px;
     width: 100%;
+    margin-left: 15px;
 }
 
 .chanceOfRain {
-    border: 2px white solid;
+    /* border: 2px white solid; */
     border-radius: 10px;
     height: 300px;
     width: 300px;
     max-width: 300px;
 }
+
+.chanceOfRainTitle {
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    font-weight: 600;
+}
+
+.chanceOfRainChart {
+
+    height: 200px;
+    border-radius: 10px;
+}
+
+
+
+.titleHeader {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.titleToday {
+    color: var(--text-secondary);
+}
+
+.titleTomorrow {
+    color: var(--text-secondary);
+}
+
+.titleToday:hover, .titleTomorrow:hover, .title7Days:hover {
+    color: var(--text-secondary-hover);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 
 
 /*

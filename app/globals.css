@@ -16,7 +16,8 @@
 
   /* define our text colors */
   --text-primary: #000;
-  --text-secondary: #aecadf;
+  --text-light: #fff;
+  --text-secondary: #7f7d7d;
 
   --button-color-naked: #ffffff;
   --button-hover-color: #f5f3f3;
@@ -28,6 +29,7 @@
   --primary: #111014;
   --text-primary: #fff;
   --secondary: #232323;
+  --text-secondary: #8a8888;
 
 
   

@@ -5,13 +5,13 @@ export function setTheme(theme) {
     }
   }
   
-  export function getTheme() {
-    if (typeof document !== "undefined") {
-      const theme = localStorage.getItem('theme');
-      if (theme) {
-        setTheme(theme);
-      }
-      return theme;
+export function getTheme() {
+  if (typeof document !== "undefined") {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+      setTheme(theme);
     }
-    return null;
+    return theme;
   }
+  return null;
+}
