@@ -41,7 +41,7 @@ const CurrentLocation = () => {
                     we render our map pin and define the size and color via tailwindcss classes 
                     also add a margin to the left of the icon to make it look better (ml-2 | margin-left 2)
                 */}
-                <MapPinIcon className="h-6 ml-3 text-primary" />
+                <MapPinIcon className="h-6 ml-3 text-primary" fill="var(--text-color)" />
             </div>
 
             <div className={styles.locationText}>

@@ -21,6 +21,7 @@
 
 .searchInput {
     background-color: var(--secondary);
+    color: var(--text-primary);
     margin-left: 10px;
 }
 .searchInput:focus {

@@ -15,6 +15,7 @@
   --secondary-accent: #3d3d3f;
 
   /* define our text colors */
+  --text-color: #000;
   --text-primary: #000;
   --text-light: #fff;
   --text-secondary: #7f7d7d;
@@ -29,7 +30,7 @@
   --primary: #111014;
   --text-primary: #fff;
   --secondary: #232323;
-  --text-secondary: #8a8888;
+  --text-secondary: #2e2d2d;
 
 
   
@@ -80,4 +81,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.text-primary {
+  color: var(--text-primary);
 }

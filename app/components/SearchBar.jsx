@@ -30,8 +30,7 @@ const SearchBar = () => {
 
     return (
         <div className={styles.search}>
-            <MagnifyingGlassIcon className={`size-6 ml-3 ${theme === 'dark' ? stylingDark : stylingLight}`} />
-
+            <MagnifyingGlassIcon fill="var(--text-color)" className={`size-6 ml-3 ${theme === 'dark' ? stylingDark : stylingLight}`} />
 
             <input 
                 type="text" 
