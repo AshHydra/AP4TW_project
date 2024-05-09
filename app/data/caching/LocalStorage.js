@@ -29,4 +29,26 @@ function GetWeatherDataFromLocalStorage() {
   }
   
 
-export { SaveWeatherDataToLocalStorage, GetWeatherDataFromLocalStorage };
+function DeleteWeatherDataFromLocalStorage() {
+    localStorage.removeItem('weatherData');
+  }
+
+
+
+function SaveSelectedCityToLocalStorage(city) {
+    localStorage.setItem('selectedCity', city);
+    DeleteWeatherDataFromLocalStorage();
+  }
+
+function GetSelectedCityFromLocalStorage() {
+    if (typeof localStorage !== 'undefined') {
+    return localStorage.getItem('selectedCity');
+    }
+    return null;
+}
+
+
+
+
+
+export { SaveWeatherDataToLocalStorage, GetWeatherDataFromLocalStorage, SaveSelectedCityToLocalStorage, GetSelectedCityFromLocalStorage, DeleteWeatherDataFromLocalStorage};

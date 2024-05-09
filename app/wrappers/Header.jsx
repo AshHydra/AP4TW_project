@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './styles/styles.Header.module.css';
 
 // importing our searchbar component
-import SearchBar from '../components/SearchBar.jsx';
+import Simple from '../components/simple.jsx';
 
 // importing our darkmode component (switch for themes)
 import ThemeButton from '../components/ThemeButton.jsx';
@@ -23,10 +23,10 @@ const Header = () => {
                 <Location />
             </div>
 
-            <div className={styles.search}>
-                {/*  render our searchbar */}
-                <SearchBar />
-            </div>
+             <div className={styles.search}>
+           
+                < Simple />
+            </div> 
 
             <div className={styles.theme}>
                 {/*  render our darkmode component */}

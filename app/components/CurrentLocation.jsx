@@ -7,7 +7,7 @@ import styles from './styles/styles.CurrentLocation.module.css';
 
 // we get our icons from HeroIcons library
 import { MapPinIcon } from "@heroicons/react/20/solid";
-
+import { GetSelectedCityFromLocalStorage } from '../data/caching/LocalStorage.js';
 
 const CurrentLocation = () => {
     // we make a local state variable called location to store the current location
@@ -23,8 +23,19 @@ const CurrentLocation = () => {
 
     // we want to display it in the format of  "City, Country" with the country in a bold style so we store them seperately
     // to avoid redundancy with parsing it using regex or splitting
-    const [city, setCity] = useState("Prague");
-    const [country, setCountry] = useState("Czech Republic");
+    const [city, setCity] = useState(GetSelectedCityFromLocalStorage() || "Prague");
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            const currentCity = GetSelectedCityFromLocalStorage();
+            if (currentCity !== city) {
+                setCity(currentCity || "Prague");
+            }
+        }, 250); // Recheck every 1000 milliseconds (1 second)
+
+        return () => clearInterval(interval);
+    }, [city]);
+    // const [country, setCountry] = useState("Czech Republic");
 
     // we will concatenate it in our html code so we can wrap country in <strong> tags to make it bold
 
@@ -54,7 +65,7 @@ const CurrentLocation = () => {
                     we render the city and country in the format of "City, Country"
                     we wrap the country in <strong> tags to make it bold
                 */}
-                <span><strong>{city}</strong>, {country}</span>
+                <span className="text-lg"><strong>{city}</strong></span>
 
             </div>
 

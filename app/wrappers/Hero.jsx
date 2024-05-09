@@ -3,50 +3,53 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles/styles.Hero.module.css';
 
-// import our rain bar chart
-import ChanceOfRainChart from '../components/ChanceOfRainChart.jsx';
-
-
 // import our weather card
 import WeatherCard from '../components/WeatherCard.jsx';
 
 import { fetchWeatherForecast } from '../data/api/ForecastApi.js';
-import { SaveWeatherDataToLocalStorage, GetWeatherDataFromLocalStorage } from '../data/caching/LocalStorage.js';
+import { SaveWeatherDataToLocalStorage, GetWeatherDataFromLocalStorage, DeleteWeatherDataFromLocalStorage, GetSelectedCityFromLocalStorage } from '../data/caching/LocalStorage.js';
 
 
 const Hero = () => {
-    const [weather, setWeather] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [city, setCity] = useState('Prague');
-    const [days, setDays] = useState(7);
     const [weatherData, setWeatherData] = useState(null);
 
-    const cachedData = GetWeatherDataFromLocalStorage();
+    useEffect(() => {
+        const selectedCity = GetSelectedCityFromLocalStorage();
+        if (selectedCity && selectedCity !== city) {
+            setCity(selectedCity);
+            setWeatherData(null); // Clear existing weather data
+            DeleteWeatherDataFromLocalStorage();
+        }
+    }, [city]);
 
     useEffect(() => {
         const fetchData = async () => {
             setIsLoading(true);
-            
+            const cachedData = GetWeatherDataFromLocalStorage();
+
             if (cachedData) {
                 setWeatherData(cachedData);
                 setIsLoading(false);
                 return;
             }
-            const data = await fetchWeatherForecast();
 
+            const data = await fetchWeatherForecast({city});
             if (data) {
                 setWeatherData(data.forecast.forecastday);
                 SaveWeatherDataToLocalStorage(data.forecast.forecastday);
-
             } else {
                 setError('Failed to fetch weather data');
             }
             setIsLoading(false);
         };
-        fetchData();
-    }, []);
 
+        if (city) {
+            fetchData();
+        }
+    }, [city]); // Depend on city to refetch when it changes
 
     const Days = {
         1: "Monday",
