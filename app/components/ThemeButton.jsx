@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getTheme, setTheme } from "@/app/hooks/darkmode/DarkModeCookie.js";
+import { getTheme, setTheme } from "@/hooks/darkmode/DarkModeCookie.js";
 
 const ThemeButton = () => {
     const LightModeIcon =

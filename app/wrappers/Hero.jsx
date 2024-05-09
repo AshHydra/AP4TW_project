@@ -22,8 +22,10 @@ const Hero = () => {
             setCity(selectedCity);
             setWeatherData(null); // Clear existing weather data
             DeleteWeatherDataFromLocalStorage();
+            // reload
+            
         }
-    }, [city]);
+    }, []);
 
     useEffect(() => {
         const fetchData = async () => {

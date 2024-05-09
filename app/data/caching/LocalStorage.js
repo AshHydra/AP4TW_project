@@ -38,6 +38,8 @@ function DeleteWeatherDataFromLocalStorage() {
 function SaveSelectedCityToLocalStorage(city) {
     localStorage.setItem('selectedCity', city);
     DeleteWeatherDataFromLocalStorage();
+    // roload
+    window.location.reload();
   }
 
 function GetSelectedCityFromLocalStorage() {
