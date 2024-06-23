@@ -6,3 +6,13 @@ Data consumption through REST API (an existing REST API on the Internet can be u
 Utilization of browser storage, e.g., for storing history or offline data
 Example projects: Weather information display web application with the ability to set favorite cities, Web application - task manager, Web application for saving points of interest on a map...
 
+
+
+## install npm
+to install npm packages run 
+
+```
+npm install
+``` 
+
+in root
