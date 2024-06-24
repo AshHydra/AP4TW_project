@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './styles/styles.Header.module.css';
 
 // importing our searchbar component
-import Simple from '../components/simple.jsx';
+import DropDownMenu from '../components/dropDownMenu';
 
 // importing our darkmode component (switch for themes)
 import ThemeButton from '../components/ThemeButton.jsx';
@@ -17,6 +17,7 @@ import Location from '../components/CurrentLocation.jsx';
 
 const Header = () => {
     return (
+        // render our header component
         <header className={styles.header}>
             <div className={styles.location}>
                 {/*  render our location component */}
@@ -25,7 +26,7 @@ const Header = () => {
 
              <div className={styles.search}>
            
-                < Simple />
+                < DropDownMenu />
             </div> 
 
             <div className={styles.theme}>

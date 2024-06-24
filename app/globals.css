@@ -24,7 +24,7 @@
   --button-hover-color: #f5f3f3;
 }
 
-
+/* we define a seperate dark-theme to fallback on when the data-theme state matches to dark */
 /* Define dark theme variables */
 [data-theme='dark'] {
   --primary: #111014;

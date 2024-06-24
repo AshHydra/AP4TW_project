@@ -31,7 +31,7 @@ const CurrentLocation = () => {
             if (currentCity !== city) {
                 setCity(currentCity || "Prague");
             }
-        }, 250); // Recheck every 1000 milliseconds (1 second)
+        }, 250); // Recheck every 250 milliseconds (0.25 second)
 
         return () => clearInterval(interval);
     }, [city]);

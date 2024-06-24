@@ -1,18 +1,15 @@
 // weather app
 
 // importing our header component
-import Header from './wrappers/Header.jsx';
+import Header from "./wrappers/Header.jsx";
 
 // importing our hero component
-import Hero from './wrappers/Hero.jsx';
+import Hero from "./wrappers/Hero.jsx";
 
-
-
+// renders the main page
 export default function Home() {
   return (
     <div className="">
-      
-      
       {/*  
         render our header 
         containing our 3 child components; 
@@ -26,8 +23,6 @@ export default function Home() {
         render our hero section containing our weather data 
       */}
       <Hero />
-
-    
     </div>
   );
 }

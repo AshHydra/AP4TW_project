@@ -14,5 +14,21 @@ to install npm packages run
 ```
 npm install
 ``` 
+this will generate
+`node_modules` containing all deps
+and `package-lock.json`
 
 in root
+
+after that run it with:
+
+```
+npm run dev
+```
+this will build and run your dev server over `localhost:3000`
+
+to build the production build you do 
+
+```
+npm run build
+```

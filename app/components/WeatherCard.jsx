@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 
-import { SaveWeatherDataToLocalStorage, GetWeatherDataFromLocalStorage } from '../data/caching/LocalStorage.js';
-
 
 const WeatherCard = ({ 
     DayOfWeek = "Monday", 
@@ -11,10 +9,9 @@ const WeatherCard = ({
     Date = "July 29",
     weatherData,
 }) => {
-    const cachedData = GetWeatherDataFromLocalStorage();
+    // bunch of states to store the weather data
 
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
     const [avgHumidity, setAvgHumidity] = useState(null);
     const [avgTempC, setAvgTempC] = useState(null);
     const [maxTempC, setMaxTempC] = useState(null);
@@ -22,8 +19,10 @@ const WeatherCard = ({
     const [condition, setCondition] = useState(null);
     const [conditionIcon, setConditionIcon] = useState(null);
 
+    // we use the useEffect hook to update the state of our component
     useEffect(() => {
         if (weatherData && weatherData.day) {
+            // we set the state of our component to the data we fetched
             setAvgHumidity(weatherData.day.avghumidity);
             setAvgTempC(weatherData.day.avgtemp_c);
             setMaxTempC(weatherData.day.maxtemp_c);
@@ -31,11 +30,16 @@ const WeatherCard = ({
             setCondition(weatherData.day.condition.text);
             setConditionIcon(weatherData.day.condition.icon);
         }
+
+        // we set the loading state to false
         setIsLoading(false);
+
+
     }, [weatherData]);
     
 
-    
+    // the api returns conditionIcon, a cdn image link, we use it to display the weather icon so we check if it exists and then display it straight away,
+    // if it doesn't exist we display a placeholder image
 
     return (
         <div className="flex flex-col items-center p-8 rounded-md w-60 sm:px-12 border-2">
